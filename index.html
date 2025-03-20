@@ -4,344 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferrari - Passion and Performance</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        
-        header {
-            background-color: #FF0000;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 50px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 14px;
-            transition: opacity 0.3s;
-        }
-        
-        nav ul li a:hover {
-            opacity: 0.8;
-        }
-        
-        .hero {
-            height: 80vh;
-            background-color: #111;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .hero-content {
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #FF0000;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #cc0000;
-        }
-        
-        .models {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        
-        .section-title p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .cars {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .car-card {
-            width: calc(33.33% - 20px);
-            margin-bottom: 40px;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .car-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .car-image {
-            height: 200px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .car-info {
-            padding: 20px;
-        }
-        
-        .car-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .car-info p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .car-specs {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-        
-        .car-spec {
-            text-align: center;
-        }
-        
-        .car-spec span {
-            display: block;
-            font-size: 0.9rem;
-            color: #999;
-        }
-        
-        .car-spec strong {
-            font-size: 1.1rem;
-            color: #333;
-        }
-        
-        .heritage {
-            background-color: #111;
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .heritage-content {
-            display: flex;
-            align-items: center;
-        }
-        
-        .heritage-text {
-            flex: 1;
-            padding-right: 40px;
-        }
-        
-        .heritage-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .heritage-text p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .heritage-image {
-            flex: 1;
-            height: 400px;
-            background-color: #333;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        footer {
-            background-color: #111;
-            color: white;
-            padding: 40px 0;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .footer-column {
-            flex: 1;
-            margin-right: 40px;
-        }
-        
-        .footer-column:last-child {
-            margin-right: 0;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #FF0000;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #333;
-            font-size: 0.9rem;
-            color: #999;
-        }
-        
-        @media (max-width: 768px) {
-            .car-card {
-                width: calc(50% - 15px);
-            }
-            
-            .heritage-content {
-                flex-direction: column;
-            }
-            
-            .heritage-text {
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-column {
-                margin-right: 0;
-                margin-bottom: 30px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .car-card {
-                width: 100%;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container nav-container">
             <div>
-                <svg class="logo" width="140" height="50" viewBox="0 0 140 50">
-                    <rect x="0" y="15" width="140" height="20" fill="#FF0000" />
-                    <rect x="20" y="8" width="100" height="34" fill="#FF0000" />
-                    <path d="M30,25 L110,25" stroke="#FFDF00" stroke-width="2" />
-                    <text x="50" y="32" font-family="Arial" font-size="16" font-weight="bold" fill="#FFDF00">FERRARI</text>
+                <svg class="logo" width="180" height="50" viewBox="0 0 180 50">
+                    <rect x="0" y="15" width="180" height="20" fill="#FF0000" />
+                    <rect x="20" y="8" width="140" height="34" fill="#FF0000" />
+                    <path d="M30,25 L150,25" stroke="#FFDF00" stroke-width="2" />
+                    <text x="60" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#FFDF00">FERRARI</text>
                 </svg>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">ホーム</a></li>
+                    <li><a href="index.html">ホーム</a></li>
                     <li><a href="#">モデル</a></li>
-                    <li><a href="#">ヘリテージ</a></li>
+                    <li><a href="history.html">歴史</a></li>
                     <li><a href="#">レーシング</a></li>
                     <li><a href="#">お問い合わせ</a></li>
                 </ul>
@@ -368,7 +48,7 @@
             <div class="cars">
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="image3.jpg" alt="Ferrari SF90 Stradale" />
+                        <img src="images/image3.jpg" alt="Ferrari SF90 Stradale" />
                     </div>
                     <div class="car-info">
                         <h3>SF90 Stradale</h3>
@@ -392,7 +72,7 @@
 
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="image1.jpg" alt="Ferrari Roma" />
+                        <img src="images/image1.jpg" alt="Ferrari Roma" />
                     </div>
                     <div class="car-info">
                         <h3>Roma</h3>
@@ -416,7 +96,7 @@
 
                 <div class="car-card">
                     <div class="car-image">
-                        <img src="image2.jpg" alt="Ferrari 296 GTB" />
+                        <img src="images/image2.jpg" alt="Ferrari 296 GTB" />
                     </div>
                     <div class="car-info">
                         <h3>296 GTB</h3>
@@ -449,7 +129,7 @@
                     <a href="#" class="btn">ヘリテージについて詳しく</a>
                 </div>
                 <div class="heritage-image">
-                    <img src="image4.jpg" alt="Ferrari Heritage" />
+                    <img src="images/image4.jpg" alt="Ferrari Heritage" />
                 </div>
             </div>
         </section>

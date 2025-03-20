@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #FF0000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* メインページのスタイル */
+.hero {
+    height: 80vh;
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF0000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+/* モデルセクション */
+.models {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+}
+
+.car-image {
+    height: 200px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.car-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.car-spec {
+    text-align: center;
+}
+
+.car-spec span {
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.car-spec strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* ヘリテージセクション */
+.heritage {
+    background-color: #111;
+    color: white;
+    padding: 80px 0;
+}
+
+.heritage-content {
+    display: flex;
+    align-items: center;
+}
+
+.heritage-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.heritage-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.heritage-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.heritage-image {
+    flex: 1;
+    height: 400px;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heritage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 歴史ページのスタイル */
+.history-hero {
+    background-color: #111;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.history-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.history-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.timeline {
+    padding: 80px 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-image {
+    flex: 1;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.timeline-year {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF0000;
+    margin-bottom: 15px;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.timeline-description {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* フッター */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #FF0000;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .car-card {
+        width: calc(50% - 15px);
+    }
+    
+    .heritage-content {
+        flex-direction: column;
+    }
+    
+    .heritage-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .timeline-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+} 
