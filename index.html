@@ -48,32 +48,32 @@
                 <p>妥協のないパフォーマンス、優れた快適性、そして比類のないスタイル。</p>
             </div>
 
-            <div class="cars">
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="laferrari9.jpg" alt="Ferrari SF90 Stradale" />
+            <div class="spec-container">
+                <div class="spec-item">
+                    <div class="spec-image fade-in-image">
+                        <img src="laferrari9.jpg" alt="最高速度">
                     </div>
-                    <div class="car-info">
+                    <div class="spec-content fade-in-text">
                         <h3>最高速度</h3>
                         <p>F1技術を活かしたハイブリッドシステムが驚異的な加速とスピードを実現し,最高速度は脅威の350km/h越え。</p>
                     </div>
                 </div>
 
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="laferrari8.jpg" alt="Ferrari Roma" />
+                <div class="spec-item">
+                    <div class="spec-image fade-in-image">
+                        <img src="laferrari8.jpg" alt="ボディ">
                     </div>
-                    <div class="car-info">
+                    <div class="spec-content fade-in-text">
                         <h3>ボディ</h3>
                         <p>カーボンファイバー製モノコックを採用し、軽量かつ高剛性を実現。ferrariならではの美しさと機能性を兼ね備えた究極のフォルム。</p>
                     </div>
                 </div>
 
-                <div class="car-card">
-                    <div class="car-image">
-                        <img src="laferrari3.jpg" alt="Ferrari 296 GTB" />
+                <div class="spec-item">
+                    <div class="spec-image fade-in-image">
+                        <img src="laferrari3.jpg" alt="エンジン">
                     </div>
-                    <div class="car-info">
+                    <div class="spec-content fade-in-text">
                         <h3>エンジン</h3>
                         <p>V12エンジンを搭載し、わずか２.9秒で100km/hに到達するのが魅力。</p>
                     </div>
@@ -145,6 +145,26 @@
             this.classList.toggle('active');
             document.querySelector('nav ul').classList.toggle('active');
         });
+
+        // フェードイン効果
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in-image, .fade-in-text');
+            const triggerPoint = window.innerHeight * 0.8; // 画面の80%の位置でトリガー
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const isVisible = (elementTop < triggerPoint) && (elementBottom > 0);
+                
+                if (isVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // 初期表示時とスクロール時に実行
+        window.addEventListener('load', handleScroll);
+        window.addEventListener('scroll', handleScroll);
     </script>
 </body>
 </html>
